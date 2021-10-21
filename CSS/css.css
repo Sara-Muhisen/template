@@ -1,0 +1,134 @@
+body {
+  background-color: rgb(234 17 96 / 72%);
+  position: absolute;
+  width: 100%;
+}
+
+html {
+  background-image: url(../img/img-01.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+h1 {
+  color: white;
+  width: 50%;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.name {
+  width: 30%;
+  margin: auto;
+}
+a,
+ul {
+  text-decoration: none;
+  list-style: none;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+li {
+  width: 30%;
+  margin: auto;
+  font-size: 15px;
+}
+i {
+  color: white;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.test {
+  padding-bottom: 50px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.preview {
+  height: 500px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.images {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  transform: scale(0.5);
+}
+.images .img-container {
+  width: 25%;
+  padding: 2px;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+}
+.social a i {
+  position: absolute;
+  border: 1.5px solid black;
+  padding: 10px;
+  color: black;
+  border-radius: 50%;
+  float: left;
+  left: 20%;
+  top: 5%;
+}
+.social p {
+  position: absolute;
+  float: right;
+  right: 20%;
+  top: 20%;
+}
+.social:hover i {
+  color: white;
+  border: 1.5px solid #ff0060;
+  background-color: #ff0060;
+}
+.social:hover p {
+  color: #ff0060;
+}
+
+.btn {
+  border: 1px;
+  border-radius: 30px;
+}
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: none;
+}
+.footer {
+  width: 50%;
+  margin: auto;
+}
+i {
+  font-size: 20px;
+}
+var header = document.getElementById("forAfter");
+var btns = header.getElementsByClassName("link");
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" active", "");
+    }
+    this.className += " active";
+    });
+}
